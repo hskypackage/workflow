@@ -22,10 +22,6 @@ class WorkflowServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__.'/../databases');
         
-        $configPath = __DIR__ . '/../config/config.php';
-
-        $this->publishes([$configPath => config_path('workflow.php')], 'config');
-
         $this->handleViews();
 
         $this->handleRoutes();
